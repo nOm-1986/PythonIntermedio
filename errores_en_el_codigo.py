@@ -16,15 +16,25 @@
             Haciendo debbugin
 """
 def divisors(num):
-    divisors = [ x for x in range(1, num + 1) if num % x == 0]
-    return divisors
+    try:
+        if num < 0:
+            raise ValueError('Ingresa un número positivo')
+        divisors = [ x for x in range(1, num + 1) if num % x == 0]
+        return divisors
+        
+    except ValueError as ve:
+        print(ve)
+        return False
 
 
 def run():
-    num = int(input('Favor ingrese un número: '))
-    print(divisors(num))
-    print('Terminó mi programa')
+    try:
+        num = int(input('Favor ingrese un número: '))
+        print(divisors(num))
+        print('Terminó mi programa')
 
+    except ValueError:
+        print('Debes ingresar un número')
 
 if __name__ == '__main__':
     run()
