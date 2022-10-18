@@ -18,7 +18,7 @@ def write():
 
 def run():
     read()
-    write() 
+    #write() 
 
 
 if __name__ == '__main__':
