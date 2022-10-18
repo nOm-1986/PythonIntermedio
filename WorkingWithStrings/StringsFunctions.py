@@ -38,6 +38,7 @@ def using_index(letter_to_find, my_string = 'Una palabra', inicio = 0):
 
 if __name__ == '__main__':
     my_string = 'Unaplabralarga'
+    print(my_string.count('a'))
     group_looking_for_and_count(my_string)
     using_find('rac', 'Una oración algo larga')
     using_rfind('a', 'Una oración algo larga')
