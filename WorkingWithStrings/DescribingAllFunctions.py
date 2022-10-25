@@ -18,7 +18,7 @@
     15. isdecimal       Comprueba si la cadena es un decimal.
     16. isdigit         Comprueba si la cadena es un dígito.
     17. isidentifier    Comprueba si la cadena es un identificador.
-    18. islower         Comprueba si todos los caracteres son minúsculas.
+    18. islower         Comprueba si todos los caracteres son minúsculos.
     19. isnumeric       Comprueba si la cadena es numérica.
     20. isprintable     Comprueba si la cadena es imprimible.
     21. isspace         Comprueba si la cadena solo contiene espacios.
