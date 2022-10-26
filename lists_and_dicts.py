@@ -4,9 +4,10 @@ def run():
 
     super_list = [
         {"firstname" : "Fabián", "lastname" : "Beltran"},
-        {"firstname" : "Maria", "lastname" : "Beltran"},
-        {"firstname" : "Karen", "lastname" : "Rivera"},
-        {"firstname" : "Adrian", "lastname" : "Beltran"}
+        {"firstname" : "Maria", "lastname" : "Rivera"},
+        {"firstname" : "Karen", "lastname" : "Agredo"},
+        {"firstname" : "Zury", "lastname" : "Beleño"},
+        {"firstname" : "Yuliza", "lastname" : "Mujica"}
     ]
 
     super_dict = {
