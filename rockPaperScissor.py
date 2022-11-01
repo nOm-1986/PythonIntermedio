@@ -37,14 +37,14 @@ rounds = 1
 def choose_options():
     user_option = int(input('Seleccione una opción 1-Piedra, 2-Papel, 3-Tijera: '))
     computer_option = random.choice(options)
-
+    assert user_option != int, "Solo se permiten los números 1, 2 o 3"
     if user_option > 3 or user_option < 1:
         print('Esa opción no es válida')
 
         condition = True
         while condition:
             user_option = int(input('Seleccione una opción 1-Piedra, 2-Papel, 3-Tijera: '))
-            if user_option > 3 or user_option < 1:
+            if user_option < 4 and user_option >= 1:
                 condition = False
         
     return user_option, computer_option
