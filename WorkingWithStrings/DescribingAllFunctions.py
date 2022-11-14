@@ -33,7 +33,7 @@
     30. replace         Reemplaza en la misma cadena un carácter por otro.
     31. removeprefix    Devuelve una nueva cadena con el prefijo especificado como argumento eliminado si se encuentra en la cadena origina.
     32. removesuffix    Devuelve una nueva cadena con el sufijo especificado
-    33. rfin            Devuelve el índice de la cadena como parámetro buscando por la derecha o -1 si no se encuentra.
+    33. rfind           Devuelve el índice de la cadena como parámetro buscando por la derecha o -1 si no se encuentra.
     34. rindex          Devuelve el índice de la cadena como parámetro buscando por la derecha o ValueError.
     35. rjust           Justifica la cadena a la derecha.
     36. rpartition      Crea particiones de una cadena usando un separador y comenzando por la derecha.
