@@ -1,6 +1,7 @@
 from cgi import print_arguments
 from msilib.schema import Condition
 import random
+from os import system, name
 
 hands = [
 """ 
@@ -30,9 +31,13 @@ hands = [
 ]
 
 options = ['piedra', 'papel', 'tijera']
-computer_wins = 0
-user_wins = 0
-rounds = 1
+
+def clearConsole():
+    if name == "nt":
+        system("cls")
+    else:
+        system("clear")
+
 
 def choose_options():
     user_option = int(input('Seleccione una opción 1-Piedra, 2-Papel, 3-Tijera: '))
@@ -46,53 +51,49 @@ def choose_options():
             user_option = int(input('Seleccione una opción 1-Piedra, 2-Papel, 3-Tijera: '))
             if user_option < 4 and user_option >= 1:
                 condition = False
-        
+    clearConsole()
     return user_option, computer_option
 
 
-while True or rounds < 6:
-    print('*' * 10)
-    print('ROUND', rounds)
-    print('*' * 10)
-    print('computer_wins', computer_wins)
-    print('user_wins', user_wins)
-
-    user_option, computer_option = choose_options()
-    rounds += 1
-
-    print(f'Usted eligió: {options[user_option-1]} - la computadora eligió: {computer_option}')
-
-    if options[user_option-1] == computer_option:
+def check_rules(user_option, computer_option, user_wins, computer_wins):
+    if ((options[user_option-1] == 'piedra' and computer_option == 'tijera') or (options[user_option-1] == 'papel' and computer_option == 'piedra') or (options[user_option-1] == 'tijera' and computer_option == 'papel')):
+        print(f"Usted eligió: {hands[user_option-1]} - la computador eligió: {computer_option}")
+        print('Usted ganó!')
+        user_wins += 1
+    elif(options[user_option-1] == computer_option):
+        print(f"Usted eligió: {hands[user_option-1]} - la computador eligió: {computer_option}")
         print('Empate')
-    #elif user_option == 'piedra':
-    elif user_option == 1:
-        if computer_option == 'tijera':
-            print('piedra gana a tijera')
-            print('Usted ganó!')
-        else:
-            print('papel gana a piedra')
-            print('Usted perdió!')
-    #elif user_option == 'papel':
-    elif user_option == 2:
-        if computer_option == 'piedra':
-            print('papel gana a piedra')
-            print('Usted ganó!')
-        else:
-            print('tijera gana a papel')
-            print('Usted perdió!')
-    #elif user_option == 'tijera':
-    elif user_option == 3:
-        if computer_option == 'papel':
-            print('tijera gana a papel')
-            print('Usted ganó!')
-        else:
-            print('piedra gana a tijera')
-            print('Usted perdió!')
-
-    if rounds == 5:
-        break
+    else:
+        print(f"Usted eligió: {hands[user_option-1]} - la computador eligió: {computer_option}")
+        print('Usted perdió')
+        computer_wins += 1
+    return user_wins, computer_wins
 
 
-print(hands[2])
+def run_game():
+    computer_wins = 0
+    user_wins = 0
+    rounds = 1
 
+    while True:
+        print('*' * 10)
+        print('ROUND', rounds)
+        print('*' * 10)
+        print('computer_wins', computer_wins)
+        print('user_wins', user_wins)
+
+        user_option, computer_option = choose_options()
+        user_wins, computer_wins = check_rules(user_option, computer_option, user_wins, computer_wins)
+
+        if user_wins == 3:
+            print('El ganador es el Usuario')
+            break
+
+        if user_wins == 3:
+            print('El ganador es el Usuario')
+            break
+    
+
+if __name__ == '__main__':
+    run_game()
 
