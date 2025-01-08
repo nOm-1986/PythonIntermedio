@@ -50,7 +50,7 @@ def choose_options():
     return user_option, computer_option
 
 
-while True:
+while True or rounds < 6:
     print('*' * 10)
     print('ROUND', rounds)
     print('*' * 10)
@@ -89,7 +89,7 @@ while True:
             print('piedra gana a tijera')
             print('Usted perdió!')
 
-    if round == 5:
+    if rounds == 5:
         break
 
 
