@@ -13,3 +13,5 @@ print('='*40)
 text = 'Hola, soy Fabian'
 unique = { c: c.upper() for c in text if c in 'aeiou'}
 print(unique)
+countingVowels = { c: text.count(c) for c in text if c in 'aeiou'}
+print(countingVowels)
