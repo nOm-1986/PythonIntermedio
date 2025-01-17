@@ -15,3 +15,6 @@ print(f_x3(20))
 palindrome = lambda string: string == string[::-1]
 print(palindrome('ojo'))
 print(palindrome('no es'))
+
+full_name = lambda name, last_name: f'Full name: {name.title()} {last_name.title()}'
+print(full_name('Jose Fabian', 'Beltran Meza'))
