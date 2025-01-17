@@ -1,5 +1,4 @@
 from cgi import print_arguments
-from msilib.schema import Condition
 import random
 from os import system, name
 
@@ -59,13 +58,16 @@ def check_rules(user_option, computer_option, user_wins, computer_wins):
     if ((options[user_option-1] == 'piedra' and computer_option == 'tijera') or (options[user_option-1] == 'papel' and computer_option == 'piedra') or (options[user_option-1] == 'tijera' and computer_option == 'papel')):
         print(f"Usted eligió: {hands[user_option-1]} - la computador eligió: {computer_option}")
         print('Usted ganó!')
+        print('-'*20)
         user_wins += 1
     elif(options[user_option-1] == computer_option):
         print(f"Usted eligió: {hands[user_option-1]} - la computador eligió: {computer_option}")
         print('Empate')
+        print('-'*20)
     else:
         print(f"Usted eligió: {hands[user_option-1]} - la computador eligió: {computer_option}")
         print('Usted perdió')
+        print('-'*20)
         computer_wins += 1
     return user_wins, computer_wins
 
@@ -73,7 +75,7 @@ def check_rules(user_option, computer_option, user_wins, computer_wins):
 def run_game():
     computer_wins = 0
     user_wins = 0
-    rounds = 1
+    rounds = 0
 
     while True:
         print('*' * 10)
@@ -84,13 +86,13 @@ def run_game():
 
         user_option, computer_option = choose_options()
         user_wins, computer_wins = check_rules(user_option, computer_option, user_wins, computer_wins)
-
-        if user_wins == 3:
-            print('El ganador es el Usuario')
+        rounds += 1
+        if computer_wins == 3:
+            print('La computadora ha ganado, Intenta nuevamente')
             break
 
         if user_wins == 3:
-            print('El ganador es el Usuario')
+            print('BOOOO HAS GANADOOOOO. FELICITACIONES')
             break
     
 
