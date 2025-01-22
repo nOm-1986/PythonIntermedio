@@ -10,8 +10,12 @@ data = [
     }
 ]
 
-country = input('Ingresa un pais => ')
+def run():
+    country2 = input('Ingresa un pais => ')
+    result = utils.pupulation_by_country(data, country2)
+    print(result[0]['Country'])
+    print(result[0]['Population'])
 
-result = utils.pupulation_by_country(data, country)
-print(result['Country'])
-print(result['Population'])
+#Dualidad para ejecutar desde la terminar directamente, o haciendo el import desde otro archivo.
+if __name__ == "__main__":
+    run()
