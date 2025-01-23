@@ -10,6 +10,9 @@ def read():
     print(number)
 
 
+#open(ruta, 'r+') ---> Donde r+ es para dar permisos de lectura y escritura no sobre escribe el archivo a diferencia de w+
+#open(ruta, 'w+') ---> Donde r+ es para dar permisos de lectura y escritura pero va a reescribir
+
 def write():
     names = ['Fabian', 'Adrian', 'Leidy', 'María José', 'Karen','Fabiola', 'Alberto']
     with open('./archivos/names.txt', "w", encoding='utf-8') as f:
