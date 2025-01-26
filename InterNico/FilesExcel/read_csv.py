@@ -4,7 +4,7 @@ FILE_URL = "d:/Development/Python/PythonIntermedio/InterNico/FilesExcel/world_po
 FILE_URL2 = "./world_population.csv"
 
 
-def read_csv(path):
+def read_csv(path, searchingCountry):
     data = []
     with open(path, mode='r', encoding='utf-8') as csvfile:
         csv_reader = csv.reader(csvfile, delimiter=',')
@@ -13,10 +13,10 @@ def read_csv(path):
             iterable = zip(header, row)
             country_dict = {k:v for k,v in iterable}
             data.append(country_dict)
-    
-    return data
+    result = list(filter(lambda x: x['Country/Territory'] == searchingCountry, data))
+    return result
 
 
 if __name__ == '__main__':
-    data1 = read_csv(FILE_URL)
-    print(data1[0])
+    data1 = read_csv(FILE_URL, 'Colombia')
+    print(data1)
