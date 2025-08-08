@@ -58,3 +58,54 @@ while condition:
     else:
         print("¡Ja, ja! ¡Estás atrapado en mi bucle!")
         user_number = int(input('Ingresa un número: '))
+
+
+# 3.2.8 Break and continue
+print("""
+Estas en el juego del traga vocales .....
+Ingresa una palabra y el sistema se encagará de eliminar las vocales.
+""")
+
+user_word = input('Ingrese -1 para salir o una palabra para quitarle las vocales: ')
+
+while user_word != '-1':
+    
+    user_word = user_word.upper()
+    
+    for letter in user_word:
+        if letter in 'AEIOU': continue
+        print(letter)
+        
+    user_word = input('Ingrese -1 para salir o una palabra para quitarle las vocales: ')
+    if user_word == '-1':
+        continue
+print('Esta hecho!!!!')
+
+
+# 3.2.12
+# While using else
+i = 1
+while i < 5:
+    print(i)
+    i += 1
+else:
+    print("else:", i)
+# imprimira 5
+
+for i in range(5):
+    print(i)
+else:
+    print("else:", i)
+
+
+bloques = 6
+numero_de_capas = 0
+bloques_usados = 1
+
+while bloques > 0:
+    if  bloques - bloques_usados > 0:
+        bloques = bloques - bloques_usados
+        numero_de_capas =+ 1
+        bloques_usados =+ 1 
+    else: break
+print('Numero de capas: ', numero_de_capas)
