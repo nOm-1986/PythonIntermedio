@@ -109,3 +109,26 @@ while bloques > 0:
         bloques_usados =+ 1 
     else: break
 print('Numero de capas: ', numero_de_capas)
+
+# Working with lists
+l = [x for x in range(1, 21)]
+print(l)
+
+my_list = []  # Creando una lista vacía.
+
+for i in range(5):
+    my_list.insert(0, i + 1)
+
+print(my_list)
+
+
+var_1 = 1
+var_2 = 3
+var_1, var_2 = var_2, var_1
+
+
+my_list = [8, 10, 6, 2, 4]  # lista a ordenar
+ 
+for i in range(len(my_list) - 1):  # necesitamos (5 - 1) comparaciones
+    if my_list[i] > my_list[i + 1]:  # compara elementos adyacentes
+        my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
