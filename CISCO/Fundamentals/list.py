@@ -74,3 +74,24 @@ for number in my_list:
         uniq_list.append(number)
 print("La lista con elementos únicos:")
 print(uniq_list)
+
+
+# 3.7 Advance application of lists
+board = []
+
+for i in range(8):
+    row = ['' for i in range(8)]
+    board.append(row)
+print(board, sep='\n')
+
+board = [ [x for x in range(1,9)]for j in range(8) ]
+print(board)
+
+rooms = [[[False for r in range(20)] for f in range(15)] for t in range(3)]
+print(rooms)
+
+table = [[":(", ":)", ":(", ":)"],
+         [":)", ":(", ":)", ":)"],
+         [":(", ":)", ":)", ":("],
+         [":)", ":)", ":)", ":("]]
+print(table)
