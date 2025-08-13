@@ -36,3 +36,47 @@ def add_numbers(a, c, b=2):
 
 add_numbers(a=1, c=3)
 #Syntax error.
+
+# Global variables
+def my_function():
+  global var
+  var = 2
+  print("¿Conozco a aquella variable?", var)
+
+var = 1
+my_function()
+print(var)
+
+# Esta parte es cierta para valores escalares
+# Esto también significa que una función recibe el valor del argumento, no el argumento en sí. Esto es cierto para los valores escalares.
+# Que pasa con las listas, son pasadas como valor o como referencia?
+
+def my_function(my_list_1):
+    print("Print #1:", my_list_1)
+    print("Print #2:", my_list_2)
+    my_list_1 = [0, 1]
+    print("Print #3:", my_list_1)
+    print("Print #4:", my_list_2)
+
+
+my_list_2 = [2, 3]
+my_function(my_list_2)
+print("Print #5:", my_list_2)
+
+def ft_and_inch_to_m(ft, inch = 0.0):
+    return ft * 0.3048 + inch * 0.0254
+
+
+def lb_to_kg(lb):
+    return lb * 0.4535923
+
+
+def bmi(weight, height):
+    if height < 1.0 or height > 2.5 or weight < 20 or weight > 200:
+        return None
+
+    return weight / height ** 2
+
+
+print(bmi(weight = lb_to_kg(175), height = ft_and_inch_to_m(10, 7)))
+
