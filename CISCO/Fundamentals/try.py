@@ -1,6 +1,7 @@
 try:
     value = input("Ingresa un valor: ")
-    print(value/value)
+    #print(value/value)
+    print(int(value)/len(value))
 except ValueError:
     print("Entrada incorrecta...")
 except ZeroDivisionError:

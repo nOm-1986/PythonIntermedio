@@ -63,7 +63,7 @@ print(var)
 my_tuple = (1, 2, 4, 8)
 #del my_tuple[0]
 #print(my_tuple)
-my_tuple[1] = my_tuple[1] = my_tuple[0]
+my_tuple[1] = my_tuple[1] + my_tuple[0]
 print(my_tuple)
 
 
@@ -92,7 +92,7 @@ print(fun(out=2))
 
 # ===================================
 dictionary = {'one': 'two', 'three': 'one', 'two': 'three'}
-v = dictionary['one']
+v = dictionary['three']
 
 for k in range(len(dictionary)):
   v = dictionary[v]
