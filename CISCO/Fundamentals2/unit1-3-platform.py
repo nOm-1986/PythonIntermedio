@@ -17,12 +17,12 @@ sobre la versión del intérprete.
 # print(platform(1))
 # print(platform(0, 1))
 # print(machine())
-# print(processor())
-# print(system())
-# print(version())
+print(processor())
+print(system())
+print(version())
 # print(architecture())
-print(python_implementation())
-for atr in python_version_tuple():
-  print(atr)
+# print(python_implementation())
+# for atr in python_version_tuple():
+#   print(atr)
 
-dir(os)
+# dir(os)

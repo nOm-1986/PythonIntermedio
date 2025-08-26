@@ -6,7 +6,7 @@ Cuando los modulos son importados, la inicialización solo se realiza
 la primera vez. Python recuerda los módulos iportados y omite silenciosamente
 todas las importaciones posteriores.
 
--- Cuando se ejeucta un archivo directamente, su variable __name__ se establece en __main__
+-- Cuando se ejeucta un archivo directamente, su variable __name__ se establece en __main__. 
 -- Cuando un archivo se importa como un módulo, su variable __name__ se establece con el nombre del archivo excluyendo el .py 
 
 Cuando importo un módulo tambien puedo acceder a sus variables.

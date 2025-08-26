@@ -1,0 +1,6 @@
+Ahora se deben responder dos preguntas:
+
+¿Cómo se transforma este árbol (en realidad, un subárbol) en un paquete real de Python (en otras palabras, ¿cómo convence a Python de que dicho árbol no es solo un montón de archivos basura, sino un conjunto de módulos)?
+¿Dónde se coloca el subárbol para que Python pueda acceder a él?
+
+La primer pregunta tiene una respuesta sorprendente: los paquetes, como los módulos, pueden requerir inicialización.
