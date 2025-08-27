@@ -64,3 +64,7 @@ print(ord('a')) # 97
 print("abcabc".count("b")) # 2
 print('abcabc'.count("d")) # 0
 print(list("abcabc")) # ['a', 'b', 'c', 'a', 'b', 'c']
+
+x = '\''
+print(len(x))
+

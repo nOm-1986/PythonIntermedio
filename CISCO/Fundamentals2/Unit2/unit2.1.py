@@ -1,5 +1,5 @@
 """
-ASCII (American Standar Code for Information Interchange)
+ASCII (American Standard Code for Information Interchange)
 
 I18N -- Internationalization
 
