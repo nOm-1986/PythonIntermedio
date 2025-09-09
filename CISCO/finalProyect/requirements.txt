@@ -1,0 +1,2 @@
+tabulate2==1.10.2
+wcwidth==0.2.13
